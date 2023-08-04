@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "testsuite:a": "cypress run --spec cypress/e2e/testa.cy.js --browser chrome"
   },
   "author": "",
   "license": "ISC",

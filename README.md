@@ -2,7 +2,7 @@
 
 ## Repo Description
 
-Cypress Zenledger Frontend Automation is the repository that host all frontend ui testing for end to end validation for Zenledger main web app.
+Cypress Continous Integration & Continous Development setup sandbox to be used for ref into the implementation of other repos
 
 ## Pre-req
 
