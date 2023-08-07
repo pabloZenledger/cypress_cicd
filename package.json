@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "open": "cypress open",
-    "testsuite:a": "cypress run --spec cypress/e2e/testa.cy.js --browser chrome --record --key b37efee8-8b9a-44ae-8169-cd964fa74603"
+    "testsuite:a": "cypress run --spec cypress/e2e/testa.cy.js --browser chrome"
   },
   "author": "",
   "license": "ISC",
