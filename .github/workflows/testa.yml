@@ -27,7 +27,7 @@ jobs:
     - name: Send results
       run: |
         curl -X POST \
-        -H "Authorization: Bearer ${{ secrets.GH_TOKEN }}" \
+        -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
         -H "Accept: application/vnd.github.v3+json" \
         "https://api.github.com/repos/pabloZenledger/frontend-cicd/actions/workflows/e2eSandbox.yml/dispatches" \
         -d '{"event_type":"test_result","client_payload":{"result": "'"$TEST_RESULT"'"}}'
