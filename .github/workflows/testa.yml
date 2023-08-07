@@ -18,14 +18,16 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run Cypress tests
+    - name: Run Cypress tests and send results
       run: |
         npm run testsuite:a
-        TEST_RESULT="All specs passed!"
-        echo "::set-output name=result::$TEST_RESULT"
-
-    - name: Send results
-      run: |
+        
+        if [$? -eq 0]; then
+            TEST_RESULT="All specs passed!"
+        else
+            TEST_RESULT="Some tests failed"
+        fi
+        
         curl -X POST \
         -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
         -H "Accept: application/vnd.github.v3+json" \
